@@ -4,4 +4,4 @@ WORKDIR /usr/src
 RUN javac -d . *.java
 RUN echo Main-Class: Rectangulator > MANIFEST.MF
 RUN jar -cvmf MANIFEST.MF rectangle.jar *.class
-CMD["java", "-jar", "/usr/src/rectangle.jar", "7", "9"]
+CMD ["java", "-jar", "/usr/src/rectangle.jar", "7", "9"]
