@@ -1,9 +1,4 @@
 node {
-    
-    environment {
-    
-	registryCredential = 'dockerhubid'
-    }
 	
     def app
 
@@ -26,7 +21,7 @@ node {
 
     stage('Push image') {
         
-        docker.withRegistry('https://registry.hub.docker.com', registryCredential) {
+        docker.withRegistry('', dockerhubid) {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         }
