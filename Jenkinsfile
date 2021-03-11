@@ -1,6 +1,5 @@
 node {
     
-	
     environment {
     
 	registryCredential = 'dockerhubid'
