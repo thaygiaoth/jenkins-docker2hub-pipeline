@@ -1,4 +1,4 @@
-FROM openjdk:8u282-jre-slim as node
+FROM openjdk:8u282-slim-buster as node
 COPY src/*.java /usr/src/
 WORKDIR /usr/src
 RUN javac -d . *.java
